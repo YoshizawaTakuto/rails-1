@@ -1,0 +1,30 @@
+<div class="show">
+    <div class="container">
+        <div class="wrapper">
+            <h3>予定</h3>
+            <div class="show-wrapper">
+                <div class="show-main">
+                    <div class="show-title">
+                        <h1><%= @task.title %></h1>
+                    </div>
+                    <div class="show-content">
+                        <div class="datetime">
+                            <h4>-日付-</h4>
+                            <p><%= @task.start_day %></p>
+                            <h4>-時間-</h4>
+                            <p><%= "#{@task.start_time}〜#{@task.end_time}" %></p>
+                        </div>
+                        <div class="memo">
+                            <h4>-メモ-</h4>
+                            <p><%= @task.content %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-nav">
+                    <%= link_to "編集", edit_task_path, class:"update"%>
+                    <%= link_to "削除", @task, method: :delete, data: { confirm: "本当に削除しますか？" }, class:"destroy" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  start_day: 2021-04-20
+  end_day: 2021-04-20
+  all_day: MyText
+
+two:
+  content: MyText
+  start_day: 2021-04-20
+  end_day: 2021-04-20
+  all_day: MyText

@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      task: 予定
+    attributes:
+      task:
+        title: タイトル
+        start_day: 日付
+        start_time: 開始時間
+        end_time: 終了時間
+        content: 内容
