@@ -11,6 +11,38 @@
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <div class="title">
+          <h1>予定帳</h1>
+        </div>
+        <div class="header-nav">
+          <div class="header-left">
+            <%= link_to("予定一覧", tasks_path, class:"nav")%>
+          </div>
+          <div class="header-right">
+            <%= link_to("新規作成", new_task_path, class:"nav")%>
+          </div>
+        </div>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="alert">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
     <%= yield %>
+    <footer>
+      <div class="container">
+        <div class="date">
+          <h3>本日：<%= Date.today.strftime("%Y年%-m月%-d日") %></h3>
+          <h3>予定数：<%= "#{Task.count}件" %></h3>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

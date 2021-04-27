@@ -1,0 +1,29 @@
+<div class="index">
+    <div class="container">
+        <div class="index-wrapper wrapper">
+            <h3>予定一覧</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>予定</th>
+                        <th>日付</th>
+                        <th>終日</th>
+                        <th>開始時間</th>
+                        <th>終了時間</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @tasks.each do |task| %>
+                     <tr>
+                        <td class="task"><%=link_to task.title, task, class:"index-link"%></td>
+                        <td><%=task.start_day%></td>
+                        <td><%=task.all_day%></td>
+                        <td><%=task.start_time%></td>
+                        <td><%=task.end_time%></td>
+                     </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
